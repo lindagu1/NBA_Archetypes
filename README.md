@@ -52,16 +52,17 @@ This analysis is limited by its reliance on a single season of data and the assu
 ## Repository Structure
 
 ```text
-Predicting-In-Hospital-Cardiac-Arrest-in-Sepsis-Patients/
-│
-├── nba_player_archetypes.ipynb/
+NBA_Archetypes/
+├── nba_player_archetypes.ipynb
 ├── data/
 │ └── raw/
-├── TRANSFERS.csv             # Raw MIMIC-III transfers table
-├── README.md                 # Project documentation
-
+├── scripts/
+├── output/
+│ ├── figures/
+│ └── tables/
+└── README.md
 ---
-
+```   
 ## How to Run
 The analysis can be run end-to-end using the Jupyter notebook `nba_player_archetypes.ipynb`. The notebook is designed to pull intermediate artifacts from the repository and does not require rerunning all scripts to reproduce figures and tables.
 
