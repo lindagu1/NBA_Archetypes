@@ -34,8 +34,7 @@ The model identifies seven distinct player archetypes:
 - Low-Usage Role Players  
 - Superstar Offensive Hubs  
 - Versatile Two-Way Forwards  
-- Primary Shot Creators  
-
+- Primary Shot Creators
 Each archetype reflects a unique combination of statistical tendencies rather than reliance on a single defining metric. Representative players are used to ground these archetypes in real basketball contexts.  
 ---
 
@@ -60,7 +59,6 @@ NBA_Archetypes/
 │ ├── figures/
 │ └── tables/
 └── README.md
-
 
 ---
 
