@@ -50,15 +50,15 @@ This analysis is limited by its reliance on a single season of data and the assu
 ---
 
 ## Repository Structure
-NBA_Archetypes/
-├── nba_player_archetypes.ipynb
+
+```text
+Predicting-In-Hospital-Cardiac-Arrest-in-Sepsis-Patients/
+│
+├── nba_player_archetypes.ipynb/
 ├── data/
 │ └── raw/
-├── scripts/
-├── output/
-│ ├── figures/
-│ └── tables/
-└── README.md
+├── TRANSFERS.csv             # Raw MIMIC-III transfers table
+├── README.md                 # Project documentation
 
 ---
 
