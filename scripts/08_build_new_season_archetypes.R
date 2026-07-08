@@ -43,9 +43,10 @@ clean_feature_matrix <- function(df) {
   df2 <- df2 |>
     mutate(
       .games = as.numeric(.data[[games_col]]),
-      .minutes = as.numeric(.data[[mp_col]])
+      .minutes = as.numeric(.data[[mp_col]]),
+      .minutes_per_game = if (max(.minutes, na.rm = TRUE) <= 60) .minutes else .minutes / .games
     ) |>
-    filter(.games >= 41, .minutes / .games >= 24)
+    filter(.games >= 41, .minutes_per_game >= 24)
 
   meta_cols <- c(player_col, team_col, pos_col, age_col, games_col, mp_col)
   meta_cols <- meta_cols[!is.na(meta_cols) & meta_cols %in% names(df2)]
@@ -63,7 +64,7 @@ clean_feature_matrix <- function(df) {
 
   drop_numeric <- intersect(
     names(df2),
-    c("Rk", "Age", "AGE", "G", "GP", "GS", "MP", "MIN", "FG%", "3P%", "2P%", "eFG%", "FT%", "PTS")
+    c("Rk", "Age", "AGE", "G", "GP", "GS", "MP", "MIN", "FG%", "3P%", "2P%", "eFG%", "FT%", "PTS", ".games", ".minutes", ".minutes_per_game")
   )
 
   X <- df2 |>
@@ -83,6 +84,11 @@ new_season <- clean_feature_matrix(new_raw)
 feature_names <- colnames(readRDS("output/tables/nba_features_scaled.rds"))
 missing_features <- setdiff(feature_names, colnames(new_season$X))
 
+if ("Trp-Dbl" %in% missing_features) {
+  new_season$X[["Trp-Dbl"]] <- 0
+  missing_features <- setdiff(feature_names, colnames(new_season$X))
+}
+
 if (length(missing_features) > 0) {
   stop("New-season file is missing required features: ", paste(missing_features, collapse = ", "))
 }
@@ -98,14 +104,17 @@ new_scaled <- sweep(new_scaled, 2, baseline_sds, "/")
 new_scaled <- as.data.frame(new_scaled)
 rownames(new_scaled) <- new_season$player_index$Player
 
-assign_to_centroid <- function(row, centers) {
-  distances <- apply(centers, 1, function(center) sum((row - center)^2))
-  as.integer(names(which.min(distances)))
+assign_to_centroids <- function(X, centers) {
+  assignments <- apply(X, 1, function(row) {
+    distances <- rowSums((centers - matrix(row, nrow = nrow(centers), ncol = ncol(centers), byrow = TRUE))^2)
+    which.min(distances)
+  })
+  as.integer(assignments)
 }
 
 new_clusters <- tibble(
   Player = rownames(new_scaled),
-  Cluster = apply(new_scaled, 1, assign_to_centroid, centers = baseline_km$centers)
+  Cluster = assign_to_centroids(as.matrix(new_scaled), baseline_km$centers)
 ) |>
   left_join(distinct(baseline_clusters, Cluster, Archetype), by = "Cluster") |>
   left_join(new_season$player_index, by = "Player") |>

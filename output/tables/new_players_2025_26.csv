@@ -1,0 +1,52 @@
+Player,Team,Pos,New Season Archetype,Cluster,Key Stats Driving Assignment
+Ausar Thompson,DET,SF,Defensive Rim Protectors,1,STL above baseline by 3.08 z; 3PA below baseline by 1.95 z; 3P below baseline by 1.82 z; PF above baseline by 1.42 z; ORB above baseline by 1.24 z
+Chet Holmgren,OKC,PF,Defensive Rim Protectors,1,BLK above baseline by 3.10 z; DRB above baseline by 1.63 z; TRB above baseline by 1.47 z; STL below baseline by 1.02 z; AST below baseline by 0.89 z
+Deandre Ayton,LAL,C,Defensive Rim Protectors,1,3PA below baseline by 2.08 z; 3P below baseline by 1.93 z; ORB above baseline by 1.81 z; AST below baseline by 1.30 z; TRB above baseline by 1.26 z
+Jake LaRavia,LAL,PF,Defensive Rim Protectors,1,STL above baseline by 1.53 z; PF above baseline by 1.41 z; FGA below baseline by 0.96 z; FG below baseline by 0.96 z; 2PA below baseline by 0.82 z
+John Collins,LAC,PF,Defensive Rim Protectors,1,AST below baseline by 1.22 z; PF above baseline by 1.14 z; 3PA below baseline by 0.71 z; 3P below baseline by 0.52 z; ORB above baseline by 0.51 z
+Matas Buzelis,CHI,PF,Defensive Rim Protectors,1,BLK above baseline by 2.59 z; 3PA above baseline by 0.98 z; PF above baseline by 0.91 z; DRB above baseline by 0.75 z; 3P above baseline by 0.74 z
+Maxime Raynaud,SAC,C,Defensive Rim Protectors,1,3PA below baseline by 1.62 z; 3P below baseline by 1.58 z; STL below baseline by 1.19 z; TRB above baseline by 1.14 z; DRB above baseline by 1.10 z
+Moussa Diabaté,CHO,C,Defensive Rim Protectors,1,ORB above baseline by 3.22 z; 3PA below baseline by 2.08 z; 3P below baseline by 1.93 z; TRB above baseline by 1.59 z; FGA below baseline by 1.52 z
+Neemias Queta,BOS,C,Defensive Rim Protectors,1,ORB above baseline by 2.51 z; 3PA below baseline by 2.03 z; BLK above baseline by 2.03 z; 3P below baseline by 1.93 z; PF above baseline by 1.81 z
+Derik Queen,NOP,C,Interior Bigs,3,PF above baseline by 1.96 z; 3P below baseline by 1.55 z; 3PA below baseline by 1.53 z; DRB above baseline by 1.27 z; TRB above baseline by 1.25 z
+Donovan Clingan,POR,C,Interior Bigs,3,ORB above baseline by 4.51 z; BLK above baseline by 3.10 z; TRB above baseline by 3.04 z; DRB above baseline by 2.12 z; PF above baseline by 1.11 z
+A.J. Green,MIL,SG,Low-Usage Role Players,4,3P above baseline by 1.76 z; 2PA below baseline by 1.75 z; 2P below baseline by 1.67 z; 3PA above baseline by 1.36 z; FTA below baseline by 1.13 z
+Ajay Mitchell,OKC,SG,Low-Usage Role Players,4,3PA below baseline by 0.98 z; DRB below baseline by 0.96 z; 3P below baseline by 0.94 z; TRB below baseline by 0.92 z; FGA below baseline by 0.73 z
+Bruce Brown,DEN,SG,Low-Usage Role Players,4,PF above baseline by 1.41 z; 3PA below baseline by 1.16 z; 3P below baseline by 1.03 z; FGA below baseline by 0.96 z; FG below baseline by 0.91 z
+Cedric Coward,MEM,SG,Low-Usage Role Players,4,STL below baseline by 1.18 z; FGA below baseline by 0.53 z; FG below baseline by 0.51 z; AST below baseline by 0.50 z; 3P below baseline by 0.46 z
+Cody Williams,UTA,SG,Low-Usage Role Players,4,3P below baseline by 1.51 z; 3PA below baseline by 1.25 z; DRB below baseline by 1.06 z; FGA below baseline by 1.02 z; FG below baseline by 0.94 z
+Egor Dёmin,BRK,PG,Low-Usage Role Players,4,2PA below baseline by 1.48 z; 2P below baseline by 1.47 z; FG below baseline by 1.38 z; FGA below baseline by 1.23 z; PF below baseline by 1.19 z
+Herbert Jones,NOP,SF,Low-Usage Role Players,4,FG below baseline by 1.33 z; 2P below baseline by 1.15 z; FTA below baseline by 1.14 z; FGA below baseline by 1.13 z; FT below baseline by 1.08 z
+Isaac Okoro,CHI,SG,Low-Usage Role Players,4,TOV below baseline by 1.31 z; DRB below baseline by 1.27 z; FGA below baseline by 1.19 z; FG below baseline by 1.17 z; TRB below baseline by 1.02 z
+Jaylon Tyson,CLE,SG,Low-Usage Role Players,4,FT below baseline by 0.80 z; FTA below baseline by 0.79 z; AST below baseline by 0.69 z; ORB above baseline by 0.66 z; PF above baseline by 0.61 z
+Julian Champagnie,SAS,SF,Low-Usage Role Players,4,2PA below baseline by 1.24 z; 3P above baseline by 1.18 z; 2P below baseline by 1.11 z; 3PA above baseline by 1.08 z; DRB above baseline by 1.00 z
+Jusuf Nurkić,UTA,C,Low-Usage Role Players,4,3PA below baseline by 1.65 z; 3P below baseline by 1.55 z; FGA below baseline by 1.54 z; FG below baseline by 1.36 z; FT below baseline by 0.97 z
+Marcus Smart,LAL,SG,Low-Usage Role Players,4,FG below baseline by 1.32 z; 2PA below baseline by 1.22 z; 2P below baseline by 1.21 z; FGA below baseline by 1.13 z; DRB below baseline by 1.05 z
+Moses Moody,GSW,SG,Low-Usage Role Players,4,2PA below baseline by 1.24 z; 2P below baseline by 1.18 z; TOV below baseline by 1.03 z; AST below baseline by 1.03 z; DRB below baseline by 0.94 z
+Nique Clifford,SAC,SG,Low-Usage Role Players,4,FT below baseline by 0.92 z; FG below baseline by 0.89 z; FTA below baseline by 0.85 z; 3P below baseline by 0.75 z; FGA below baseline by 0.73 z
+Noah Clowney,BRK,PF,Low-Usage Role Players,4,2P below baseline by 1.01 z; 2PA below baseline by 0.99 z; AST below baseline by 0.97 z; FG below baseline by 0.87 z; PF above baseline by 0.61 z
+Pelle Larsson,MIA,SG,Low-Usage Role Players,4,3P below baseline by 0.94 z; 3PA below baseline by 0.91 z; FGA below baseline by 0.84 z; BLK below baseline by 0.78 z; DRB below baseline by 0.75 z
+Sam Hauser,BOS,PF,Low-Usage Role Players,4,2PA below baseline by 1.62 z; TOV below baseline by 1.53 z; 2P below baseline by 1.49 z; FTA below baseline by 1.44 z; FT below baseline by 1.41 z
+Sam Merrill,CLE,SG,Low-Usage Role Players,4,2PA below baseline by 1.55 z; STL below baseline by 1.42 z; 2P below baseline by 1.40 z; TOV below baseline by 1.35 z; DRB below baseline by 1.30 z
+Terance Mann,BRK,SG,Low-Usage Role Players,4,FGA below baseline by 1.51 z; FG below baseline by 1.43 z; 3PA below baseline by 1.14 z; 2PA below baseline by 1.10 z; DRB below baseline by 1.08 z
+Tre Johnson,WAS,SG,Low-Usage Role Players,4,STL below baseline by 1.23 z; TRB below baseline by 1.03 z; DRB below baseline by 0.99 z; FTA below baseline by 0.91 z; AST below baseline by 0.87 z
+Tre Jones,CHI,PG,Low-Usage Role Players,4,3P below baseline by 1.32 z; 3PA below baseline by 1.27 z; PF below baseline by 1.25 z; TRB below baseline by 0.85 z; BLK below baseline by 0.81 z
+Tristan Da Silva,ORL,SF,Low-Usage Role Players,4,FTA below baseline by 0.89 z; TOV below baseline by 0.87 z; AST below baseline by 0.84 z; FT below baseline by 0.75 z; 2PA below baseline by 0.72 z
+Ace Bailey,UTA,SF,Perimeter Shooters and Secondary Guards,2,PF above baseline by 1.35 z; FTA below baseline by 0.94 z; FT below baseline by 0.94 z; AST below baseline by 0.80 z; DRB below baseline by 0.54 z
+Brandon Miller,CHO,SF,Perimeter Shooters and Secondary Guards,2,3P above baseline by 1.25 z; 3PA above baseline by 1.23 z; PF above baseline by 1.04 z; FGA above baseline by 0.84 z; TOV above baseline by 0.75 z
+Collin Gillespie,PHO,PG,Perimeter Shooters and Secondary Guards,2,3P above baseline by 1.73 z; 3PA above baseline by 1.50 z; STL above baseline by 1.12 z; 2P below baseline by 1.01 z; FTA below baseline by 0.93 z
+Immanuel Quickley,TOR,PG,Perimeter Shooters and Secondary Guards,2,AST above baseline by 1.16 z; BLK below baseline by 1.01 z; STL above baseline by 0.92 z; 3PA above baseline by 0.88 z; 3P above baseline by 0.83 z
+Jalen Suggs,ORL,PG,Perimeter Shooters and Secondary Guards,2,STL above baseline by 1.38 z; ORB below baseline by 0.78 z; 2PA below baseline by 0.77 z; TRB below baseline by 0.73 z; 2P below baseline by 0.71 z
+Jarace Walker,IND,PF,Perimeter Shooters and Secondary Guards,2,2P below baseline by 0.60 z; ORB below baseline by 0.58 z; DRB above baseline by 0.54 z; FG below baseline by 0.50 z; BLK below baseline by 0.49 z
+Kon Knueppel,CHO,SF,Perimeter Shooters and Secondary Guards,2,3P above baseline by 2.42 z; 3PA above baseline by 1.89 z; FGA above baseline by 0.98 z; FG above baseline by 0.97 z; PF above baseline by 0.74 z
+Reed Sheppard,HOU,SG,Perimeter Shooters and Secondary Guards,2,STL above baseline by 2.18 z; 3P above baseline by 1.70 z; 3PA above baseline by 1.48 z; FTA below baseline by 0.98 z; ORB below baseline by 0.94 z
+Jalen Johnson,ATL,SF,Primary Shot Creators,7,DRB above baseline by 2.84 z; AST above baseline by 2.23 z; TRB above baseline by 2.19 z; TOV above baseline by 2.17 z; 2PA above baseline by 1.80 z
+Kawhi Leonard,LAC,SF,Primary Shot Creators,7,STL above baseline by 2.19 z; FT above baseline by 1.98 z; FG above baseline by 1.79 z; FTA above baseline by 1.67 z; FGA above baseline by 1.58 z
+Brandon Ingram,TOR,SF,Versatile Two-Way Forwards,6,2PA above baseline by 2.00 z; FGA above baseline by 1.67 z; 2P above baseline by 1.66 z; FG above baseline by 1.65 z; FT above baseline by 1.24 z
+Cooper Flagg,DAL,SF,Versatile Two-Way Forwards,6,2PA above baseline by 2.09 z; 2P above baseline by 1.75 z; FGA above baseline by 1.36 z; FG above baseline by 1.26 z; FT above baseline by 1.12 z
+Jaime Jaquez Jr.,MIA,SF,Versatile Two-Way Forwards,6,2PA above baseline by 1.15 z; 2P above baseline by 1.12 z; 3P below baseline by 0.99 z; 3PA below baseline by 0.96 z; AST above baseline by 0.74 z
+Jeremiah Fears,NOP,PG,Versatile Two-Way Forwards,6,STL above baseline by 1.21 z; TOV above baseline by 1.06 z; 2PA above baseline by 0.99 z; FGA above baseline by 0.71 z; 2P above baseline by 0.61 z
+Ryan Rollins,MIL,PG,Versatile Two-Way Forwards,6,STL above baseline by 1.71 z; TOV above baseline by 1.39 z; PF above baseline by 1.30 z; AST above baseline by 1.17 z; 3P above baseline by 0.99 z
+Saddiq Bey,NOP,SF,Versatile Two-Way Forwards,6,PF below baseline by 1.19 z; BLK below baseline by 1.01 z; TOV below baseline by 0.95 z; FT above baseline by 0.78 z; ORB above baseline by 0.72 z
+VJ Edgecombe,PHI,SG,Versatile Two-Way Forwards,6,PF above baseline by 1.93 z; STL above baseline by 1.47 z; FGA above baseline by 0.78 z; ORB above baseline by 0.68 z; 2PA above baseline by 0.60 z
+Zion Williamson,NOP,PF,Versatile Two-Way Forwards,6,FTA above baseline by 2.06 z; 3PA below baseline by 2.04 z; 3P below baseline by 1.93 z; 2P above baseline by 1.71 z; FT above baseline by 1.64 z

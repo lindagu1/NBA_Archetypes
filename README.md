@@ -56,13 +56,16 @@ Run the scripts below from the project root. By default, they use `NBA_SEASON=20
 NBA_SEASON=2025-26 Rscript scripts/07_fetch_nba_stats_api.R
 NBA_SEASON=2025-26 Rscript scripts/08_build_new_season_archetypes.R
 NBA_SEASON=2025-26 Rscript scripts/09_compare_seasons.R
+NBA_SEASON=2025-26 Rscript scripts/10_plot_season_archetypes.R
 ```
 
-If the live NBA API is unavailable, save a compatible season file under `data/raw/` and run the pipeline with an explicit fallback path:
+If the live NBA API is unavailable, use the Basketball Reference fallback fetcher or save a compatible season file under `data/raw/` and run the pipeline with an explicit fallback path:
 
 ```bash
+NBA_SEASON=2025-26 Rscript scripts/07b_fetch_basketball_reference.R
 NBA_SEASON=2025-26 NBA_SEASON_FILE=data/raw/nbastats_2025_26.csv Rscript scripts/08_build_new_season_archetypes.R
 NBA_SEASON=2025-26 NBA_SEASON_FILE=data/raw/nbastats_2025_26.csv Rscript scripts/09_compare_seasons.R
+NBA_SEASON=2025-26 Rscript scripts/10_plot_season_archetypes.R
 ```
 
 The extension writes season-specific outputs to `output/tables/`, including:
@@ -71,6 +74,8 @@ The extension writes season-specific outputs to `output/tables/`, including:
 - `cluster_profiles_2025_26.csv`
 - `archetype_changes_2025_26.csv`
 - `new_players_2025_26.csv`
+
+For the 2025-2026 fallback run currently included in this repository, the filtered comparison produced **166 filtered players**, including **115 returning players**, **56 archetype changes**, and **51 new players**.
 
 ## Results
 
@@ -88,11 +93,15 @@ The final model identifies **seven player archetypes**:
 
 Each archetype reflects a combination of statistical tendencies rather than one defining metric. For example, Primary Shot Creators and Superstar Offensive Hubs are both high-offense groups, but they differ in the balance of scoring volume, playmaking, usage, and broader contributions.
 
-## Visualization
+## Visualizations
 
-The PCA plot below projects the standardized feature matrix into two dimensions for visualization. Clustering was performed in the full standardized feature space, not on the PCA projection.
+The PCA plots below project standardized player statistics into two dimensions for visualization. Clustering and archetype assignment are performed in the full standardized feature space, not directly on the PCA projection.
 
-![NBA player archetype clusters](output/figure/nba_player_clusters.png)
+| 2024-2025 Original Season | 2025-2026 New Season |
+| --- | --- |
+| ![2024-2025 NBA player archetype clusters](output/figure/nba_player_clusters_2024_25.png) | ![2025-2026 NBA player archetype clusters](output/figure/nba_player_clusters_2025_26.png) |
+
+The 2025-2026 plot assigns players to the original archetype centroids and projects them into the same baseline PCA space. This keeps archetype labels comparable across seasons.
 
 ## Repository Structure
 
@@ -102,7 +111,8 @@ The PCA plot below projects the standardized feature matrix into two dimensions 
 ├── nba_player_archetypes.ipynb
 ├── data/
 │   └── raw/
-│       └── nbastats.csv
+│       ├── nbastats.csv
+│       └── nbastats_2025_26.csv
 ├── scripts/
 │   ├── 01_check_load.R
 │   ├── 02_clean_build_matrix.R
@@ -112,20 +122,29 @@ The PCA plot below projects the standardized feature matrix into two dimensions 
 │   ├── 05_pca_cluster_plot.R
 │   ├── 06_cluster_profile.R
 │   ├── 07_fetch_nba_stats_api.R
+│   ├── 07b_fetch_basketball_reference.R
 │   ├── 08_build_new_season_archetypes.R
-│   └── 09_compare_seasons.R
+│   ├── 09_compare_seasons.R
+│   └── 10_plot_season_archetypes.R
 └── output/
     ├── figure/
     │   ├── k_elbow_wss.png
     │   ├── k_gap_statistic.png
     │   ├── k_silhouette.png
-    │   └── nba_player_clusters.png
+    │   ├── nba_player_clusters.png
+    │   ├── nba_player_clusters_2024_25.png
+    │   └── nba_player_clusters_2025_26.png
     └── tables/
+        ├── archetype_changes_2025_26.csv
         ├── cluster_names.csv
         ├── cluster_profiles.csv
+        ├── cluster_profiles_2025_26.csv
         ├── cluster_signatures.csv
+        ├── nba_features_scaled_2025_26.rds
+        ├── new_players_2025_26.csv
         ├── player_clusters.csv
         ├── player_clusters_named.csv
+        ├── player_clusters_named_2025_26.csv
         └── top_features_per_cluster.csv
 ```
 
@@ -150,7 +169,7 @@ source("scripts/06_cluster_profile.R")
 
 The R scripts use packages including `tidyverse`, `factoextra`, and `ggrepel`.
 
-The multi-season API extension additionally uses `httr2` and `jsonlite`.
+The multi-season extension additionally uses `httr2`, `jsonlite`, and `rvest`.
 
 ## Key Takeaways
 
