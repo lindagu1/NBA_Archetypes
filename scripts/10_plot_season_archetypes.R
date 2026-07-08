@@ -53,6 +53,7 @@ plot_clusters <- function(scores, title, subtitle) {
       aes(label = label),
       size = 3.5,
       fontface = "bold",
+      show.legend = FALSE,
       max.overlaps = 50,
       seed = 42,
       box.padding = 0.9,

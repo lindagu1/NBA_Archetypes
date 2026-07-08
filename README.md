@@ -77,6 +77,12 @@ The extension writes season-specific outputs to `output/tables/`, including:
 
 For the 2025-2026 fallback run currently included in this repository, the filtered comparison produced **166 filtered players**, including **115 returning players**, **56 archetype changes**, and **51 new players**.
 
+### Where to See Player Movement
+
+To review which players changed archetypes, open `output/tables/archetype_changes_2025_26.csv`. This table compares returning players across seasons and includes the previous archetype, new archetype, previous cluster, new cluster, whether the archetype changed, and the largest standardized statistical shifts driving the change.
+
+To review players who appear in the new season but not the original filtered dataset, open `output/tables/new_players_2025_26.csv`. This table lists each new player, team, position, assigned archetype, cluster, and key stats used to interpret the assignment.
+
 ## Results
 
 The final model identifies **seven player archetypes**:
