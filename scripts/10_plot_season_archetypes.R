@@ -46,11 +46,14 @@ plot_clusters <- function(scores, title, subtitle) {
   reps <- get_representatives(scores)
   scores <- scores |>
     mutate(label = if_else(Player %in% reps, Player, ""))
+  label_scores <- scores |>
+    filter(label != "")
 
-  ggplot(scores, aes(PC1, PC2, color = factor(Cluster))) +
-    geom_point(size = 2, alpha = 0.82) +
+  ggplot(scores, aes(PC1, PC2)) +
+    geom_point(aes(color = factor(Cluster)), size = 2, alpha = 0.82) +
     geom_text_repel(
-      aes(label = label),
+      data = label_scores,
+      aes(label = label, color = factor(Cluster)),
       size = 3.5,
       fontface = "bold",
       show.legend = FALSE,
@@ -62,6 +65,7 @@ plot_clusters <- function(scores, title, subtitle) {
       bg.color = "white",
       bg.r = 0.15
     ) +
+    guides(color = guide_legend(override.aes = list(label = "", size = 4, alpha = 1))) +
     theme_minimal() +
     theme(
       legend.position = "bottom",

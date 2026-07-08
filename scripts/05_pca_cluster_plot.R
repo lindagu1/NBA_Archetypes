@@ -59,6 +59,7 @@ p <- ggplot(pca_df, aes(PC1, PC2, color = Cluster)) +
     aes(label = label),
     size = 3.5,
     fontface = "bold",
+    show.legend = FALSE,
     max.overlaps = 50,
     force = 5,
     force_pull = 0.5,
