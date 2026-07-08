@@ -20,7 +20,7 @@ To make the clusters more stable and interpretable, the analysis filters the pla
 
 ## Methods
 
-The analysis follows a reproducible clustering pipeline:
+The original one-season analysis follows a reproducible clustering pipeline:
 
 1. **Load and inspect the data**
 2. **Clean the player table and filter the cohort**
@@ -34,6 +34,43 @@ The analysis follows a reproducible clustering pipeline:
 10. **Assign interpretable basketball archetype labels**
 
 K-means was chosen for interpretability: once features are standardized, each cluster centroid can be read as an archetypal statistical profile.
+
+## Multi-Season Extension
+
+This repository now includes an extension for comparing archetypes across seasons using live NBA stats data or a saved season CSV fallback.
+
+The comparison uses the original 2024-2025 archetype model as the reference point. New-season players are standardized using the original season's feature scaling and assigned to the nearest original k-means centroid. This preserves the meaning of each archetype across seasons, so a player moving from one archetype to another reflects movement relative to the original archetype framework rather than a completely retrained clustering system.
+
+The extension answers:
+
+- Which returning players changed archetypes?
+- Which returning players stayed in the same archetype?
+- Which new players entered the filtered player pool?
+- Which statistical changes appear most related to each movement?
+
+### New Season Workflow
+
+Run the scripts below from the project root. By default, they use `NBA_SEASON=2025-26`.
+
+```bash
+NBA_SEASON=2025-26 Rscript scripts/07_fetch_nba_stats_api.R
+NBA_SEASON=2025-26 Rscript scripts/08_build_new_season_archetypes.R
+NBA_SEASON=2025-26 Rscript scripts/09_compare_seasons.R
+```
+
+If the live NBA API is unavailable, save a compatible season file under `data/raw/` and run the pipeline with an explicit fallback path:
+
+```bash
+NBA_SEASON=2025-26 NBA_SEASON_FILE=data/raw/nbastats_2025_26.csv Rscript scripts/08_build_new_season_archetypes.R
+NBA_SEASON=2025-26 NBA_SEASON_FILE=data/raw/nbastats_2025_26.csv Rscript scripts/09_compare_seasons.R
+```
+
+The extension writes season-specific outputs to `output/tables/`, including:
+
+- `player_clusters_named_2025_26.csv`
+- `cluster_profiles_2025_26.csv`
+- `archetype_changes_2025_26.csv`
+- `new_players_2025_26.csv`
 
 ## Results
 
@@ -73,7 +110,10 @@ The PCA plot below projects the standardized feature matrix into two dimensions 
 │   ├── 03_choose_k.R
 │   ├── 04_kmeans_final.R
 │   ├── 05_pca_cluster_plot.R
-│   └── 06_cluster_profile.R
+│   ├── 06_cluster_profile.R
+│   ├── 07_fetch_nba_stats_api.R
+│   ├── 08_build_new_season_archetypes.R
+│   └── 09_compare_seasons.R
 └── output/
     ├── figure/
     │   ├── k_elbow_wss.png
@@ -109,6 +149,8 @@ source("scripts/06_cluster_profile.R")
 ```
 
 The R scripts use packages including `tidyverse`, `factoextra`, and `ggrepel`.
+
+The multi-season API extension additionally uses `httr2` and `jsonlite`.
 
 ## Key Takeaways
 
